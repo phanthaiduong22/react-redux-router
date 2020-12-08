@@ -11,9 +11,7 @@ class App extends Component {
         <div>
           <Menu />
           <div className="container">
-            <div className="row">
-              {this.showContentMenus(routes)}
-            </div>
+            <div className="row">{this.showContentMenus(routes)}</div>
           </div>
         </div>
       </Router>

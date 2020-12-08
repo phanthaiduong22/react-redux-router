@@ -4,7 +4,7 @@ class ProductItem extends Component {
   render() {
     let { product, index } = this.props;
     let statusName = product.status ? "On Stock" : "Out Stock";
-    let statusClass = product.status ? "warning" : "default";
+    let statusClass = product.status ? "warning" : "danger";
 
     return (
       <tr>
@@ -13,15 +13,15 @@ class ProductItem extends Component {
         <td>{product.name}</td>
         <td>{product.price}</td>
         <td>
-          <button type="button" class={`btn btn-${statusClass}`}>
+          <button type="button" className={`btn btn-${statusClass}`}>
             {statusName}
           </button>
         </td>
         <td>
-          <button type="button" class="btn btn-success">
+          <button type="button" className="btn btn-success mr-md-3">
             Edit
           </button>
-          <button type="button" class="btn btn-danger">
+          <button type="button" className="btn btn-danger">
             Delete
           </button>
         </td>
