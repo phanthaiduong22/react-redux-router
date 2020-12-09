@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 const menus = [
   { name: "Home", to: "/", exact: true },
@@ -15,9 +15,9 @@ const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
         let active = match ? "active" : "";
         return (
           <li className={`nav-item ${active}`}>
-            <a className="nav-link" href={to}>
+            <Link className="nav-link" to={to}>
               {label}
-            </a>
+            </Link>
           </li>
         );
       }}
@@ -29,9 +29,9 @@ class Menu extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           CALL API
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
